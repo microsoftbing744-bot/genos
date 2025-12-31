@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANTIGRAVITY: GENOME OS</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Global Scripts (No Modules for file:// compatibility) -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader-content">
+            <div class="loader-dna">
+                <div class="loader-strand"></div>
+                <div class="loader-strand"></div>
+            </div>
+            <div class="loader-text">INITIALIZING GENOME OS</div>
+            <div class="loader-progress">
+                <div class="loader-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div id="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Background Noise/Grain -->
+    <div class="noise-overlay"></div>
+
+    <!-- Connection Success Flash Effect -->
+    <div id="connection-flash" class="connection-flash"></div>
+
+    <!-- Main Content -->
+    <main id="app">
+
+        <!-- Section A: Gravity Core -->
+        <section id="section-a" class="section section-hero">
+            <div class="canvas-container">
+                <!-- Spline Iframe Integration -->
+                <iframe src='https://my.spline.design/dnaparticles-D73SIgwi2LtHOSkmsOwIuuHK/' frameborder='0'
+                    width='100%' height='100%'></iframe>
+                <!-- Overlay to capture mouse events for smooth scroll if needed, or let interactions pass through -->
+                <div class="interaction-blocker"></div>
+            </div>
+            <div class="scifi-grid"></div>
+            <!-- Interactive Neural Network Background -->
+            <canvas id="neural-canvas"></canvas>
+            <div id="particles-container"></div>
+
+            <div class="hero-content">
+                <h1 class="hero-title" data-speed="0.5">GENOME OS</h1>
+            </div>
+
+            <div class="scroll-indicator">
+                <span>SCROLL TO DESCEND</span>
+            </div>
+        </section>
+
+        <!-- Section B: Molecular Blueprint -->
+        <section id="section-b" class="section section-blueprint">
+            <div class="content-wrapper glass-panel">
+                <h2 class="section-title">MOLECULAR BLUEPRINT</h2>
+                <div class="blueprint-details">
+                    <p class="hero-sub">Your biology is now code.<br>Simulate your future.</p>
+                    <div class="dna-stats">
+                        <div class="stat-item">
+                            <span class="label">GENOME SEQ</span>
+                            <span class="value">99.9%</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="label">OPTIMIZATION</span>
+                            <span class="value">ACTIVE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section C: What-If Sandbox -->
+        <section id="section-c" class="section section-sandbox">
+            <div class="sandbox-container">
+                <div class="human-wireframe" id="wireframe-container">
+                    <!-- Placeholder for Wireframe Visualization -->
+                    <div class="wireframe-placeholder">
+                        <canvas id="liquid-canvas"></canvas>
+                    </div>
+                    <div class="status-overlay">
+                        <span id="status-text">SYSTEM: STABLE</span>
+                    </div>
+                </div>
+
+                <div class="controls-panel glass-panel">
+                    <h3>SIMULATION CONTROLS</h3>
+
+                    <div class="control-group">
+                        <label>DIET QUALITY</label>
+                        <input type="range" min="0" max="100" value="50" class="slider" id="diet-slider">
+                    </div>
+
+                    <div class="control-group">
+                        <label>SLEEP CYCLES</label>
+                        <input type="range" min="0" max="100" value="70" class="slider" id="sleep-slider">
+                    </div>
+
+                    <div class="control-group">
+                        <label>STRESS LOAD</label>
+                        <input type="range" min="0" max="100" value="30" class="slider" id="stress-slider">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section F: Trusted Medical Nodes (Partners) -->
+        <section id="section-f" class="section section-partners">
+            <section id="section-f" class="section section-partners">
+                <div class="partners-wrapper">
+                    <h2 class="section-title">TRUSTED MEDICAL NODES</h2>
+                    <div class="partners-grid">
+                        <div class="partner-card">
+                            <div class="partner-icon">🏥</div>
+                            <h3>PIMS</h3>
+                            <p class="partner-loc">ISLAMABAD_NODE</p>
+                        </div>
+                        <div class="partner-card">
+                            <div class="partner-icon">🧬</div>
+                            <h3>AGA KHAN</h3>
+                            <p class="partner-loc">KARACHI_HUB</p>
+                        </div>
+                        <div class="partner-card">
+                            <div class="partner-icon">⚕️</div>
+                            <h3>SHIFA INTL</h3>
+                            <p class="partner-loc">ISLAMABAD_CORE</p>
+                        </div>
+                        <div class="partner-card">
+                            <div class="partner-icon">🛡️</div>
+                            <h3>CMH</h3>
+                            <p class="partner-loc">RAWALPINDI_BASE</p>
+                        </div>
+                        <div class="partner-card">
+                            <div class="partner-icon">🧪</div>
+                            <h3>SHAUKAT KHANUM</h3>
+                            <p class="partner-loc">LAHORE_RESEARCH_CTR</p>
+                        </div>
+                        <div class="partner-card">
+                            <div class="partner-icon">🏢</div>
+                            <h3>JINNAH HOSPITAL</h3>
+                            <p class="partner-loc">LAHORE_MAIN_NODE</p>
+                        </div>
+                        <div class="partner-card">
+                            <div class="partner-icon">🚑</div>
+                            <h3>LIAQUAT NATIONAL</h3>
+                            <p class="partner-loc">KARACHI_MED_COMPLEX</p>
+                        </div>
+                        <div class="partner-card">
+                            <div class="partner-icon">🏥</div>
+                            <h3>KULSUM BEGUM</h3>
+                            <p class="partner-loc">ISLAMABAD_ZONE</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section E: Neural Uplink (Contact) -->
+            <section id="section-e" class="section section-uplink">
+                <div class="glass-panel terminal-window">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">NEURAL_UPLINK_V1.0</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="input-line">
+                            <span class="prompt">> IDENTITY:</span>
+                            <input type="text" class="glitch-input" placeholder="ENTER_NAME">
+                        </div>
+                        <div class="input-line">
+                            <span class="prompt">> FREQUENCY:</span>
+                            <input type="email" class="glitch-input" placeholder="ENTER_EMAIL">
+                        </div>
+                        <div class="input-line">
+                            <span class="prompt">> DATA_PACKET:</span>
+                            <textarea class="glitch-input" rows="1" placeholder="ENTER_MESSAGE"></textarea>
+                        </div>
+                        <button class="terminal-submit">[ TRANSMIT_DATA ]</button>
+                        <div class="transmission-status"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section D: Kinetic Ledger -->
+            <section id="section-d" class="section section-footer">
+                <div class="footer-content">
+                    <h2 class="footer-title">READY TO MERGE?</h2>
+
+                    <div class="sync-container">
+                        <button class="pulse-button" id="biometric-btn" disabled>
+                            <span class="btn-text">BIOMETRIC SYNC</span>
+                            <span class="btn-scan-line"></span>
+                        </button>
+                        <div class="sync-status">WAITING FOR NEURAL UPLINK...</div>
+                    </div>
+
+                    <div class="footer-data">
+                        <div class="data-row">
+                            <span>SYSTEM ID: G-OS-2040-X</span>
+                            <span>LATENCY: 0.02ms</span>
+                        </div>
+                        <div class="data-row">
+                            <span>ENCRYPTION: QUANTUM-256</span>
+                            <span>STATUS: ONLINE</span>
+                        </div>
+                        <p class="copyright">© 2040 GENOME OS. ALL BIOLOGICAL RIGHTS RESERVED.</p>
+                    </div>
+                </div>
+            </section>
+
+    </main>
+
+    <!-- Main Logic -->
+    <script src="main.js"></script>
+</body>
+
+</html>
